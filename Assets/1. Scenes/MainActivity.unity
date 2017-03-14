@@ -244,7 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9464e841cf94855458c0c2b94c228124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationDescription: {fileID: 1469994545}
 --- !u!1 &1469994543
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +421,7 @@ GameObject:
   - component: {fileID: 1661726254}
   - component: {fileID: 1661726256}
   - component: {fileID: 1661726255}
+  - component: {fileID: 1661726257}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -481,6 +481,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1661726253}
+--- !u!114 &1661726257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1661726253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354c3886ee2970f45bc2eec60cc27d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locationDescription: {fileID: 1469994545}
+  lat: 24.917828
+  lon: 67.0971
 --- !u!1001 &2050407433
 Prefab:
   m_ObjectHideFlags: 0

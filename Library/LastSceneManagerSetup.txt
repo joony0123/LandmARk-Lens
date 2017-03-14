@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/GoogleMaps/Demo.unity
+- path: Assets/1. Scenes/MainActivity.unity
   isLoaded: 1
   isActive: 1

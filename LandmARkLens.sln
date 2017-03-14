@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARkLens.CSharp.Plugins", "LandmARkLens.CSharp.Plugins.csproj", "{CC895F3E-6C79-CB23-E957-1C11CA515F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARkLens.CSharp", "LandmARkLens.CSharp.csproj", "{812DA9C3-2F80-3556-7A12-81F09C7EADCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARkLens.CSharp.Editor", "LandmARkLens.CSharp.Editor.csproj", "{658A8B2E-5B17-3F80-6966-93A0D12DB841}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC895F3E-6C79-CB23-E957-1C11CA515F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC895F3E-6C79-CB23-E957-1C11CA515F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC895F3E-6C79-CB23-E957-1C11CA515F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC895F3E-6C79-CB23-E957-1C11CA515F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{812DA9C3-2F80-3556-7A12-81F09C7EADCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{812DA9C3-2F80-3556-7A12-81F09C7EADCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{812DA9C3-2F80-3556-7A12-81F09C7EADCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{812DA9C3-2F80-3556-7A12-81F09C7EADCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{658A8B2E-5B17-3F80-6966-93A0D12DB841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{658A8B2E-5B17-3F80-6966-93A0D12DB841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{658A8B2E-5B17-3F80-6966-93A0D12DB841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{658A8B2E-5B17-3F80-6966-93A0D12DB841}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
