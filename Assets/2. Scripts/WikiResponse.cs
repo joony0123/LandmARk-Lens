@@ -40,7 +40,7 @@ public class WikiResponse : MonoBehaviour {
     {
         yield return new WaitForSeconds(3f);
 
-        landmarkName = GameObject.Find("Name & Map Panel").GetComponent<Demo>().landmarkName;
+        landmarkName = GameObject.Find("Name & Map Panel").GetComponent<Demo2>().landmarkName;
         url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
         landmarkNameArr = landmarkName.Split(' ');
         for(int i = 0; i < landmarkNameArr.Length; i++)

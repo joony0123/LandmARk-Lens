@@ -56,10 +56,4 @@ public class Demo : MonoBehaviour
             Debug.Log("WWW Error: " + www.error);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
