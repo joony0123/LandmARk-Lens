@@ -393,11 +393,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: LandmARkLens
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 80ccc45677bed301
   metroApplicationDescription: LandmARkLens
   wsaImages: {}
   metroTileShortName: 
@@ -416,7 +416,7 @@ PlayerSettings:
     WindowsStoreApps:
       InternetClient: True
       Microphone: False
-      SpatialPerception: False
+      SpatialPerception: True
       WebCam: True
   metroFTAName: 
   metroFTAFileTypes: []

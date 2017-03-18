@@ -84,8 +84,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\2. Scripts\CameraCapture.cs" />
     <Compile Include="Assets\2. Scripts\Demo.cs" />
+    <Compile Include="Assets\2. Scripts\PanelResize.cs" />
+    <Compile Include="Assets\2. Scripts\WikiResponse.cs" />
     <Compile Include="Assets\GoogleMaps\Scripts\GoogleMap.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\ColorPicker\GazeableColorPicker.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\GazeRuler\Scripts\DeleteLine.cs" />
