@@ -28,6 +28,7 @@ public class PhotoCap2 : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        
         getFolderPath();
         while (!haveFolderPath)
         {
@@ -119,6 +120,10 @@ public class PhotoCap2 : MonoBehaviour
                 string base64 = Convert.ToBase64String(fileData);
 
                 print(base64);
+
+                GameObject.Find("Canvas").transform.GetChild(0).gameObject.SetActive(true);
+                GameObject.Find("Canvas").transform.GetChild(1).gameObject.SetActive(true);
+               
 
                 GameObject demoObj = GameObject.FindGameObjectWithTag("Demo");
                 Demo2 demoScript = demoObj.GetComponent<Demo2>();

@@ -22,7 +22,9 @@ public class Demo2 : MonoBehaviour
 
     void Start()
     {
-        locationDescription = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
+        //locationDescription = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
+        
+        
     }
 
     //called by PhotoCap2 when it takes a photo
@@ -66,6 +68,8 @@ public class Demo2 : MonoBehaviour
             landmarkName = parsedJson["responses"][0]["landmarkAnnotations"][0]["description"];
             var landmarkLat = parsedJson["responses"][0]["landmarkAnnotations"][0]["locations"][0]["latLng"]["latitude"];
             var landmarkLng = parsedJson["responses"][0]["landmarkAnnotations"][0]["locations"][0]["latLng"]["longitude"];
+
+            
 
             Debug.Log("Landmark name: " + landmarkName);
             Debug.Log("Landmark Latitude: " + landmarkLat);
