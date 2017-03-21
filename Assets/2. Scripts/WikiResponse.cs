@@ -25,9 +25,6 @@ public class WikiResponse : MonoBehaviour {
         /*anchor = this.gameObject.AddComponent<WorldAnchor>();
         anchorMgr = new WorldAnchorManager();
         anchorMgr.AttachAnchor(this.gameObject, "This Anchor");*/
-        
-
-
 
 
         StartCoroutine(fetch());
