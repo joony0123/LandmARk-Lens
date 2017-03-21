@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARk-Lens.CSharp.Plugins", "LandmARk-Lens.CSharp.Plugins.csproj", "{2500504F-3CB4-CC69-17B9-1E0F1FB2C495}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARk-Lens.Plugins", "LandmARk-Lens.Plugins.csproj", "{80ABE9CC-7DAC-3B24-7C98-89D73C85B051}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARk-Lens.CSharp", "LandmARk-Lens.CSharp.csproj", "{1B831B1C-8F08-E2E6-23BB-0BEB08DCDC2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARk-Lens", "LandmARk-Lens.csproj", "{47A53866-D2C6-E260-25B6-30C6F23F5670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARk-Lens.CSharp.Editor", "LandmARk-Lens.CSharp.Editor.csproj", "{207B7A19-FEFB-BA49-807E-AD62138A8923}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LandmARk-Lens.Editor", "LandmARk-Lens.Editor.csproj", "{D29E4C06-F7CB-7EEB-3193-74D41BB2B72C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2500504F-3CB4-CC69-17B9-1E0F1FB2C495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2500504F-3CB4-CC69-17B9-1E0F1FB2C495}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2500504F-3CB4-CC69-17B9-1E0F1FB2C495}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2500504F-3CB4-CC69-17B9-1E0F1FB2C495}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B831B1C-8F08-E2E6-23BB-0BEB08DCDC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B831B1C-8F08-E2E6-23BB-0BEB08DCDC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B831B1C-8F08-E2E6-23BB-0BEB08DCDC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B831B1C-8F08-E2E6-23BB-0BEB08DCDC2C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{207B7A19-FEFB-BA49-807E-AD62138A8923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{207B7A19-FEFB-BA49-807E-AD62138A8923}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{207B7A19-FEFB-BA49-807E-AD62138A8923}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{207B7A19-FEFB-BA49-807E-AD62138A8923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80ABE9CC-7DAC-3B24-7C98-89D73C85B051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80ABE9CC-7DAC-3B24-7C98-89D73C85B051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80ABE9CC-7DAC-3B24-7C98-89D73C85B051}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80ABE9CC-7DAC-3B24-7C98-89D73C85B051}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A53866-D2C6-E260-25B6-30C6F23F5670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A53866-D2C6-E260-25B6-30C6F23F5670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A53866-D2C6-E260-25B6-30C6F23F5670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A53866-D2C6-E260-25B6-30C6F23F5670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D29E4C06-F7CB-7EEB-3193-74D41BB2B72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D29E4C06-F7CB-7EEB-3193-74D41BB2B72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D29E4C06-F7CB-7EEB-3193-74D41BB2B72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D29E4C06-F7CB-7EEB-3193-74D41BB2B72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

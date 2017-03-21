@@ -126,7 +126,7 @@ public class PhotoCap2 : MonoBehaviour
                
 
                 GameObject demoObj = GameObject.FindGameObjectWithTag("Demo");
-                Demo2 demoScript = demoObj.GetComponent<Demo2>();
+                LandmarkDetect demoScript = demoObj.GetComponent<LandmarkDetect>();
                 demoScript.detectImage(base64);
 
                 //debug
