@@ -40,10 +40,10 @@ GameObject:
   - component: {fileID: 224065598323209420}
   - component: {fileID: 222466974035050272}
   - component: {fileID: 114940637690357222}
-  - component: {fileID: 114132079925534116}
+  - component: {fileID: 65030987502171280}
   m_Layer: 5
   m_Name: Wiki Panel
-  m_TagString: Untagged
+  m_TagString: Panel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,6 +65,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &65030987502171280
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1211361987902608}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: -816.51984, y: -806.5817, z: 0.99999976}
+  m_Center: {x: 3.022905, y: -3.082654, z: -0.0046236515}
 --- !u!114 &114115383801259390
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,18 +108,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114132079925534116
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1211361987902608}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cf0a5c9a142fe48afecfdb0f90817a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wikiText: {fileID: 114735018881803686}
 --- !u!114 &114550491850004782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,10 +239,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 30, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1268, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1448, y: 0}
+  m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224124517270375508
 RectTransform:

@@ -19,7 +19,7 @@ public class WikiResponse : MonoBehaviour {
     private WorldAnchor anchor;
 
     // Use this for initialization
-    void Start () {
+    public void WikiStuff () {
 
         // World Anchoring Not Working
         /*anchor = this.gameObject.AddComponent<WorldAnchor>();
@@ -38,9 +38,10 @@ public class WikiResponse : MonoBehaviour {
 
     private IEnumerator fetch()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
-        landmarkName = GameObject.Find("Name & Map Panel").GetComponent<LandmarkDetect>().landmarkName;
+        //landmarkName = GameObject.Find("Name & Map Panel").GetComponent<LandmarkDetect>().landmarkName;
+        landmarkName = gameObject.GetComponent<LandmarkDetect>().landmarkName;
         url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=";
         landmarkNameArr = landmarkName.Split(' ');
         for(int i = 0; i < landmarkNameArr.Length; i++)
