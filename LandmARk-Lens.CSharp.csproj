@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\2. Scripts\Instructions.cs" />
     <Compile Include="Assets\2. Scripts\LandmarkDetect.cs" />
     <Compile Include="Assets\2. Scripts\Map.cs" />
     <Compile Include="Assets\2. Scripts\PanelResize.cs" />
