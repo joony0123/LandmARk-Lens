@@ -16,19 +16,6 @@ public class SizeLimit : MonoBehaviour {
     }
 
 	void Update () {
-        Debug.Log("Sizelimit");
-        /*rect = new Rect(
-            rect.x,
-            rect.y,
-            Mathf.Clamp(rect.width, 100, 1000),
-            Mathf.Clamp(rect.height, 100, 1000)
-            );*/
-        //rectTrans.rect = rect;
-        /*Vector2 vec = new Vector2(
-            Mathf.Clamp(sd.x, 10, 1000),
-            Mathf.Clamp(sd.y, 10, 1000)
-            );
-        rectTrans.sizeDelta = vec;*/
         rectTrans.sizeDelta = new Vector2(
             Mathf.Clamp(rectTrans.sizeDelta.x, 800, 10000),
             Mathf.Clamp(rectTrans.sizeDelta.y, 800, 10000)
