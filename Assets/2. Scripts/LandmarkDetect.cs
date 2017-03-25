@@ -16,6 +16,7 @@ public class LandmarkDetect : MonoBehaviour
     public string landmarkCountry;
     public Text locationDescription;
     public Text latlngText;
+    private bool isFetchingGeolocation = false;
 
     GameObject canvas;
 
@@ -49,7 +50,6 @@ public class LandmarkDetect : MonoBehaviour
     private IEnumerator WaitForRequest(WWW www)
     {
         yield return www;
-
         if (www.error == null)
         {
             var json = JSON.Parse(www.text);
@@ -69,6 +69,7 @@ public class LandmarkDetect : MonoBehaviour
                     "&key=AIzaSyCz4W-NjIwxZp4N3lhfXnZ09V-JoACy5bE";
                 WWW wwwGeolocation = new WWW(url);
                 StartCoroutine(WaitForGeolocationRequest(wwwGeolocation));
+                new WaitUntil(() => isFetchingGeolocation == false);
             }
 
             //locationDescription.text = landmarkName + "\n" + "<Geolocation>\n" + "Latitude : " + landmarkLat + "\nLongitude : " + landmarkLng;
@@ -77,20 +78,27 @@ public class LandmarkDetect : MonoBehaviour
         {
             Debug.Log("WWW Error: " + www.error);
         }
+        yield return www;
     }
 
     private IEnumerator WaitForGeolocationRequest(WWW www)
     {
         yield return www;
 
+        isFetchingGeolocation = true;
+
         if (www.error == null)
         {
             var parsedJson = JSON.Parse(www.text);
             landmarkCity = parsedJson["results"][0]["address_components"][4]["long_name"];
             landmarkCountry = parsedJson["results"][0]["address_components"][5]["long_name"];
+            isFetchingGeolocation = false;
 
             Debug.Log(landmarkCountry);
             Debug.Log(landmarkCity);
+
+            gameObject.GetComponent<BingNews>().fetchNews();
+
         } else
         {
             Debug.Log("WWW Error: " + www.error);
