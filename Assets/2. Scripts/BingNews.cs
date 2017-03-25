@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this needs to be on the same gameobject as LandmarkDetect, aka the camera
 public class BingNews : MonoBehaviour {
 
     Dictionary<string, string> headers = new Dictionary<string, string>();

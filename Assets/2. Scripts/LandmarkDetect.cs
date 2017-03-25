@@ -22,12 +22,14 @@ public class LandmarkDetect : MonoBehaviour
     CanvasGroup cgNameMap;
     CanvasGroup cgWiki;
 
+    string Image64;
+
     void Start()
     {
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         userFeedbackText = canvas.transform.GetChild(2).gameObject.GetComponent<Text>();
         //Image64 = "";
-        //detectImage(Image64);
+        detectImage(Image64);
     }
 
     //called by PhotoCap2 when it takes a photo
@@ -125,6 +127,10 @@ public class LandmarkDetect : MonoBehaviour
         //Wiki stuff
         WikiResponse wikiScript = gameObject.GetComponent<WikiResponse>();
         wikiScript.WikiStuff();
+
+        //News stuff
+        BingNews newsScript = gameObject.GetComponent<BingNews>();
+        newsScript.fetchNews();
 
         //debug cube
         //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);

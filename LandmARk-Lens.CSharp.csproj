@@ -84,6 +84,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\2. Scripts\BingNews.cs" />
     <Compile Include="Assets\2. Scripts\Instructions.cs" />
     <Compile Include="Assets\2. Scripts\LandmarkDetect.cs" />
     <Compile Include="Assets\2. Scripts\Map.cs" />
@@ -92,6 +93,8 @@
     <Compile Include="Assets\2. Scripts\SizeLimit.cs" />
     <Compile Include="Assets\2. Scripts\TapPhotoGesture.cs" />
     <Compile Include="Assets\2. Scripts\Twilio.cs" />
+    <Compile Include="Assets\2. Scripts\TwilioSMS.cs" />
+    <Compile Include="Assets\2. Scripts\WeatherDemo.cs" />
     <Compile Include="Assets\2. Scripts\WikiResponse.cs" />
     <Compile Include="Assets\GoogleMaps\Scripts\GoogleMap.cs" />
     <Compile Include="Assets\HoloToolkit-Examples\ColorPicker\GazeableColorPicker.cs" />
