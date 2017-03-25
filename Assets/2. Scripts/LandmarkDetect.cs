@@ -16,7 +16,6 @@ public class LandmarkDetect : MonoBehaviour
     public string landmarkCountry;
     public Text locationDescription;
     public Text latlngText;
-    private bool isFetchingGeolocation = false;
 
     GameObject canvas;
     Text userFeedbackText;
@@ -28,14 +27,12 @@ public class LandmarkDetect : MonoBehaviour
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         userFeedbackText = canvas.transform.GetChild(2).gameObject.GetComponent<Text>();
         //Image64 = "";
-        detectImage(Image64);
+        //detectImage(Image64);
     }
 
     //called by PhotoCap2 when it takes a photo
     public void detectImage(string imageBase64)
     {
-        Image64 = input;
-
         gameObject.AddComponent<WorldAnchor>();
 
         string url = "https://vision.googleapis.com/v1/images:annotate?key=AIzaSyCz4W-NjIwxZp4N3lhfXnZ09V-JoACy5bE";
@@ -83,14 +80,11 @@ public class LandmarkDetect : MonoBehaviour
     {
         yield return www;
 
-        isFetchingGeolocation = true;
-
         if (www.error == null)
         {
             var parsedJson = JSON.Parse(www.text);
             landmarkCity = parsedJson["results"][0]["address_components"][4]["long_name"];
             landmarkCountry = parsedJson["results"][0]["address_components"][5]["long_name"];
-            isFetchingGeolocation = false;
 
             Debug.Log(landmarkCountry);
             Debug.Log(landmarkCity);
