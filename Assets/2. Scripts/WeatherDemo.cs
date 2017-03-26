@@ -102,7 +102,7 @@ public class WeatherDemo : MonoBehaviour
             }
             else if ((weather[i] + "").Contains("Rain"))
             {
-                image.sprite = Resources.Load<Sprite>("Rain") as Sprite;
+                image.sprite = Resources.Load<Sprite>("Rainy") as Sprite;
             }
             else
             {
