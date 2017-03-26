@@ -20,8 +20,8 @@ public class BingNews : MonoBehaviour
         headers.Add("Ocp-Apim-Subscription-Key", "0cbbf65a0afc46ecb1daa8e8b6723e3e");
 
         var getLandmarkDetect = gameObject.GetComponent<LandmarkDetect>();
-        string landmarkCity = "Osaka";//getLandmarkDetect.landmarkCity;
-        string landmarkCountry = "Japan";//getLandmarkDetect.landmarkCountry;
+        string landmarkCity = "Paris";//getLandmarkDetect.landmarkCity;
+        string landmarkCountry = "France";//getLandmarkDetect.landmarkCountry;
         string landmarkCityUrl = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + landmarkCity + "&count=5";
         string landmarkCountryUrl = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + landmarkCountry + "&count=5";
 
@@ -140,6 +140,7 @@ public class BingNews : MonoBehaviour
             Texture2D texture = new Texture2D(www.texture.width, www.texture.height);
             www.LoadImageIntoTexture(texture);
             Sprite sprite = Sprite.Create(texture, new Rect(0.0f, 0.0f, www.texture.width, www.texture.height), new Vector2(0, 0), 100f);
+            
 
             GameObject.FindGameObjectWithTag("News Content").transform.GetChild(num).GetChild(0).GetComponent<Image>().sprite = sprite;
 
@@ -150,7 +151,8 @@ public class BingNews : MonoBehaviour
         }
         else
         {
-            Debug.Log("WWW Error: " + www.error);
+            Debug.Log("Default Image");
+            
         }
     }
 
