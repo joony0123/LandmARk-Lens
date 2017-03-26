@@ -26,7 +26,7 @@ public class Instructions : MonoBehaviour {
         }
 
         //Pause
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         for (float g = 1f; g >= 0f; g -= 0.1f)
         {
