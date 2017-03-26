@@ -36,11 +36,7 @@ public class LandmarkDetect : MonoBehaviour
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         userFeedbackText = canvas.transform.GetChild(4).gameObject.GetComponent<Text>();
         //Image64 = "";
-     //   detectImage(Image64);
-
-      
-
-
+        detectImage(Image64);
     }
 
     //called by PhotoCap2 when it takes a photo
@@ -149,6 +145,9 @@ public class LandmarkDetect : MonoBehaviour
         newsPanel.SetActive(true);
         cgNews = newsPanel.GetComponent<CanvasGroup>();
 
+        //GameObject content = newsPanel.transform.GetChild(0).GetChild(0).gameObject;
+        //content.GetComponent<RectTransform>().position = Vector3.up;
+
         //call coroutine to start the fade ins
         StartCoroutine("Fade");
 
@@ -166,6 +165,10 @@ public class LandmarkDetect : MonoBehaviour
         //News stuff
         BingNews newsScript = gameObject.GetComponent<BingNews>();
         newsScript.fetchNews();
+
+        //Weather stuff
+        WeatherDemo weatherScript = gameObject.GetComponent<WeatherDemo>();
+        weatherScript.startWeather(lat, lng);
 
         userFeedbackText.text = "Landmark Detected!";
 

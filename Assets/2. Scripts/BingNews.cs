@@ -12,8 +12,6 @@ public class BingNews : MonoBehaviour
     Dictionary<string, string> headers = new Dictionary<string, string>();
     ArrayList spriteList = new ArrayList();
 
-
-
     public void fetchNews()
     {
         headers.Add("Ocp-Apim-Subscription-Key", "0cbbf65a0afc46ecb1daa8e8b6723e3e");
@@ -34,8 +32,6 @@ public class BingNews : MonoBehaviour
         StartCoroutine(WaitForRequest(landmarkCitywww, city));
         StartCoroutine(WaitForRequest(landmarkCountrywww, country));
         // fetchDescriptionAndImage("https://api.cognitive.microsoft.com/api/v5/entities/3bd9e326-67e3-cb9d-57a5-63f0f59fa061", "https://www.bing.com/th?id=ON.D6DB36F5EE39FAF1B3F03A8B14A44765&pid=News");
-
-
     }
 
     IEnumerator WaitForRequest(WWW www, string word)
@@ -80,18 +76,11 @@ public class BingNews : MonoBehaviour
                 //fetch image for each news
                 fetchImage(imageUrl, i);
 
-                
-
-
-
                 Debug.Log(newsArticle);
                 //  Debug.Log("Title: " + title + "\ndescription: " + desc + "\nRead URL: " + readUrl + "\nimageUrl: " + imageUrl);
                 Debug.Log("Title: " + title + "\ndescription: " + desc + "\nimageUrl: " + imageUrl);
             }
-
-
             //Set the texts
-
         }
         else
         {

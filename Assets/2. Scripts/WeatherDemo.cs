@@ -3,31 +3,35 @@ using UnityEngine;
 using SimpleJSON;
 using System;
 using System.Globalization;
+using UnityEngine.UI;
 
-public class WeatherDemo : MonoBehaviour {
+public class WeatherDemo : MonoBehaviour
+{
     private string url;
-    private string lat;
-    private string lon;
-	// Use this for initialization
-	void Start () {
-        StartCoroutine(fetchWeather());
-	}
-	
-    private IEnumerator fetchWeather()
+
+    GameObject canvas;
+    GameObject weatherPanel;
+
+    void Start()
     {
-        yield return new WaitForSeconds(3f);
+        canvas = GameObject.FindGameObjectWithTag("Canvas");
+        weatherPanel = canvas.transform.GetChild(2).gameObject;     //make sure weather panel is in the right spot!
+    }
+
+    public void startWeather(string lat, string lon)
+    {
+        StartCoroutine(fetchWeather(lat, lon));
+        //StartCoroutine(fetchWeather("60", "60"));       //debugging
+    }
+
+    private IEnumerator fetchWeather(string lat, string lon)
+    {
+        yield return new WaitForSeconds(.1f);
         ArrayList dates = new ArrayList();
 
         //temperature contains max and min of particular day in order
         ArrayList temperature = new ArrayList();
         ArrayList weather = new ArrayList();
-
-        //hardcode lat, lon
-        lat = "35";
-        lon = "139";
-
-        //depends on how LandmarkDetect.cs has changed.
-        // lat = gameObject.GetComponent<LandmarkDetect>().landmarkName;
 
         url = "http://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&appid=3bbed7b4815f12091eaada1427722254";
 
@@ -63,11 +67,12 @@ public class WeatherDemo : MonoBehaviour {
                 dates.Add(date);
                 max = double.Parse(detail[i]["main"]["temp_max"]);
                 min = double.Parse(detail[i]["main"]["temp_min"]);
-            } else
+            }
+            else
             {
                 double currentMax = double.Parse(detail[i]["main"]["temp_max"]);
                 double currentMin = double.Parse(detail[i]["main"]["temp_min"]);
-              
+
                 if (currentMax > max)
                 {
                     max = currentMax;
@@ -78,22 +83,106 @@ public class WeatherDemo : MonoBehaviour {
                 }
             }
         }
+        GameObject icons = weatherPanel.transform.GetChild(2).gameObject;
+        GameObject temp = weatherPanel.transform.GetChild(1).gameObject;
+        int tempCounter = 0;
+        GameObject weatherDates = weatherPanel.transform.GetChild(0).gameObject;
+        GameObject dayWeek = weatherPanel.transform.GetChild(3).gameObject;
         for (int i = 0; i < weather.Count; i++)
         {
-            Debug.Log(weather[i] + " ");
+            //Debug.Log(weather[i] + " ");
+            Image image = icons.transform.GetChild(i).gameObject.GetComponent<Image>();
+            if ((weather[i] + "").Contains("Clouds"))
+            {
+                image.sprite = Resources.Load<Sprite>("Cloudy") as Sprite;
+            }
+            else if ((weather[i] + "").Contains("Snow"))
+            {
+                image.sprite = Resources.Load<Sprite>("Snow") as Sprite;
+            }
+            else if ((weather[i] + "").Contains("Rain"))
+            {
+                image.sprite = Resources.Load<Sprite>("Rain") as Sprite;
+            }
+            else
+            {
+                image.sprite = Resources.Load<Sprite>("Sunny") as Sprite;
+            }
         }
-        for (int i = 0; i < temperature.Count; i++)
+        for (int i = 0; i < temperature.Count; i += 2)
         {
-            Debug.Log(temperature[i] + " ");
+            //i is max and i + 1 is min
+            Text text = temp.transform.GetChild(tempCounter).gameObject.GetComponent<Text>();
+            text.text = "High: " + temperature[i] + "\n" + "Low: " + temperature[i + 1];
+            tempCounter++;
         }
         for (int i = 0; i < dates.Count; i++)
         {
-            Debug.Log(dates[i] + " ");
+            //Debug.Log(dates[i] + " ");
+            Text text = weatherDates.transform.GetChild(i).gameObject.GetComponent<Text>();
+            text.text = dates[i] + "";
+
+            Text text2 = dayWeek.transform.GetChild(i).gameObject.GetComponent<Text>();
+            string dayOfWeek = GetDay(dates[i] + "");
+            text2.text = dayOfWeek;
         }
     }
 
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    string GetDay(string input)
+    {
+        string[] splitStr = input.Split(' ');
+        string month = splitStr[0].Trim();
+        string day = splitStr[1].Trim();
+
+        int monthInt = 1;
+        switch (month)
+        {
+            case "January":
+                monthInt = 1;
+                break;
+            case "February":
+                monthInt = 2;
+                break;
+            case "March":
+                monthInt = 3;
+                break;
+            case "April":
+                monthInt = 4;
+                break;
+            case "May":
+                monthInt = 5;
+                break;
+            case "June":
+                monthInt = 6;
+                break;
+            case "July":
+                monthInt = 7;
+                break;
+            case "August":
+                monthInt = 8;
+                break;
+            case "September":
+                monthInt = 9;
+                break;
+            case "October":
+                monthInt = 10;
+                break;
+            case "November":
+                monthInt = 11;
+                break;
+            case "December":
+                monthInt = 12;
+                break;
+        }
+        int dayInt = Convert.ToInt32(day);
+
+        DateTime dateTime = new DateTime(2017, monthInt, dayInt);
+        string dayOfWeek = dateTime.DayOfWeek.ToString();
+
+        //Debug.Log(dayOfWeek);
+        //Debug.Log("Month: " + month);
+        //Debug.Log("Day: " + day);
+
+        return dayOfWeek;
+    }
 }
