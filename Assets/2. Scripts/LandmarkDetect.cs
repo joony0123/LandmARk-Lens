@@ -30,6 +30,12 @@ public class LandmarkDetect : MonoBehaviour
         userFeedbackText = canvas.transform.GetChild(2).gameObject.GetComponent<Text>();
         //Image64 = "";
         detectImage(Image64);
+
+        //Testing..
+        BingNews newsScript = gameObject.GetComponent<BingNews>();
+        newsScript.fetchNews();
+
+
     }
 
     //called by PhotoCap2 when it takes a photo
