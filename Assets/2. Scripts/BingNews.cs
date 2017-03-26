@@ -20,8 +20,8 @@ public class BingNews : MonoBehaviour
         headers.Add("Ocp-Apim-Subscription-Key", "0cbbf65a0afc46ecb1daa8e8b6723e3e");
 
         var getLandmarkDetect = gameObject.GetComponent<LandmarkDetect>();
-        string landmarkCity = "Paris";//getLandmarkDetect.landmarkCity;
-        string landmarkCountry = "France";//getLandmarkDetect.landmarkCountry;
+        string landmarkCity = getLandmarkDetect.landmarkCity;
+        string landmarkCountry = getLandmarkDetect.landmarkCountry;
         string landmarkCityUrl = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + landmarkCity + "&count=5";
         string landmarkCountryUrl = "https://api.cognitive.microsoft.com/bing/v5.0/news/search?q=" + landmarkCountry + "&count=5";
 

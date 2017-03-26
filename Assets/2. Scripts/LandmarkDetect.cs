@@ -10,6 +10,9 @@ public class LandmarkDetect : MonoBehaviour
 {
     public GameObject nameMapPanel;
     public GameObject wikiPanel;
+    public GameObject weatherPanel;
+    public GameObject newsPanel;
+    
     public GameObject mapObject;
     public string landmarkName;
     public string landmarkCity;
@@ -21,6 +24,8 @@ public class LandmarkDetect : MonoBehaviour
     Text userFeedbackText;
     CanvasGroup cgNameMap;
     CanvasGroup cgWiki;
+    CanvasGroup cgNews;
+    CanvasGroup cgWeather;
 
     string Image64;
 
@@ -29,11 +34,9 @@ public class LandmarkDetect : MonoBehaviour
         canvas = GameObject.FindGameObjectWithTag("Canvas");
         userFeedbackText = canvas.transform.GetChild(2).gameObject.GetComponent<Text>();
         //Image64 = "";
-        detectImage(Image64);
+       // detectImage(Image64);
 
-        //Testing..
-        BingNews newsScript = gameObject.GetComponent<BingNews>();
-        newsScript.fetchNews();
+      
 
 
     }
@@ -70,11 +73,11 @@ public class LandmarkDetect : MonoBehaviour
             if (landmarkName != null)
             {
                 InstantiatePanels(landmarkName, landmarkLat, landmarkLng);
-                userFeedbackText.text = "Landmark successfully detected!";
+                userFeedbackText.text = "Landmark Detected!";
             }
             else
             {
-                userFeedbackText.text = "No landmark detected.";
+                userFeedbackText.text = "No Landmark Detected";
             }
         }
         else
@@ -119,6 +122,16 @@ public class LandmarkDetect : MonoBehaviour
         wikiPanel = canvas.transform.GetChild(1).gameObject;
         wikiPanel.SetActive(true);
         cgWiki = wikiPanel.GetComponent<CanvasGroup>();
+
+        weatherPanel = canvas.transform.GetChild(2).gameObject;
+        weatherPanel.SetActive(true);
+        cgWeather = weatherPanel.GetComponent<CanvasGroup>();
+
+        newsPanel = canvas.transform.GetChild(3).gameObject;
+        newsPanel.SetActive(true);
+        cgNews = newsPanel.GetComponent<CanvasGroup>();
+
+
 
         //call coroutine to start the fade ins
         StartCoroutine("Fade");
