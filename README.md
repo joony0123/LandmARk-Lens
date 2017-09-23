@@ -2,7 +2,7 @@
 
 Please visit our [LandmARk-Lens DevPost](https://devpost.com/software/landmark-lens-p1x2bg) for Demo and more information
 
-![alt text](https://user-images.githubusercontent.com/22063984/30777542-981e5f62-a08a-11e7-925c-bd5d65872ecd.png)
+<img src="https://user-images.githubusercontent.com/22063984/30777542-981e5f62-a08a-11e7-925c-bd5d65872ecd.png" width="600" align="center">
 
 ## Built With
 
