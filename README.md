@@ -14,7 +14,7 @@ Please visit our [LandmARk-Lens DevPost](https://devpost.com/software/landmark-l
 
 ## Authors
 
-[Joon Kim](https://github.com/joony0123)
-[Joshua Wang](https://github.com/joshua31101)
-[Emily Chen](https://github.com/echen67)
-[Roy Hong](https://github.com/sroyhong313)
+[Joon Kim](https://github.com/joony0123)     
+[Joshua Wang](https://github.com/joshua31101)     
+[Emily Chen](https://github.com/echen67)     
+[Roy Hong](https://github.com/sroyhong313)     
